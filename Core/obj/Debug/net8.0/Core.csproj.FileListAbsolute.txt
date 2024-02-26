@@ -15,3 +15,20 @@ D:\Desarrollo\Chat Back\Chat\Core\obj\Debug\net8.0\ref\Core.dll
 D:\Desarrollo\Chat Back\Chat\Core\bin\Debug\net8.0\Core.xml
 D:\Desarrollo\Chat Back\Chat\Core\obj\Debug\net8.0\Core.xml
 D:\Desarrollo\Chat Back\Chat\Core\obj\Debug\net8.0\Core.sourcelink.json
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\bin\Debug\net8.0\Core.deps.json
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\bin\Debug\net8.0\Core.runtimeconfig.json
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\bin\Debug\net8.0\Core.dll
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\bin\Debug\net8.0\Core.pdb
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\bin\Debug\net8.0\Core.xml
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.sourcelink.json
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.dll
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\refint\Core.dll
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.xml
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.pdb
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
+C:\Users\Edson\Desktop\chat\Chat_BackEnd\Core\obj\Debug\net8.0\ref\Core.dll

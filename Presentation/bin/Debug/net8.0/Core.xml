@@ -4,10 +4,5 @@
         <name>Core</name>
     </assembly>
     <members>
-        <member name="P:Core.Features.Usuarios.Command.Login.UserName">
-            <example>
-            samuelopez
-            </example>
-        </member>
     </members>
 </doc>

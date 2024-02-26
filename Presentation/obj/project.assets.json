@@ -3488,19 +3488,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lopez\\.nuget\\packages\\": {}
+    "C:\\Users\\Edson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desarrollo\\Chat Back\\Chat\\Presentation\\Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\Edson\\Desktop\\chat\\Chat_BackEnd\\Presentation\\Presentation.csproj",
       "projectName": "Presentation",
-      "projectPath": "D:\\Desarrollo\\Chat Back\\Chat\\Presentation\\Presentation.csproj",
-      "packagesPath": "C:\\Users\\lopez\\.nuget\\packages\\",
-      "outputPath": "D:\\Desarrollo\\Chat Back\\Chat\\Presentation\\obj\\",
+      "projectPath": "C:\\Users\\Edson\\Desktop\\chat\\Chat_BackEnd\\Presentation\\Presentation.csproj",
+      "packagesPath": "C:\\Users\\Edson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Edson\\Desktop\\chat\\Chat_BackEnd\\Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Edson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3514,8 +3514,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Desarrollo\\Chat Back\\Chat\\Core\\Core.csproj": {
-              "projectPath": "D:\\Desarrollo\\Chat Back\\Chat\\Core\\Core.csproj"
+            "C:\\Users\\Edson\\Desktop\\chat\\Chat_BackEnd\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Edson\\Desktop\\chat\\Chat_BackEnd\\Core\\Core.csproj"
             }
           }
         }
@@ -3524,6 +3524,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3592,7 +3597,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

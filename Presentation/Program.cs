@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("SignalRPolicy", builder =>
     {
-        builder.WithOrigins("http://localhost:5173") // Reemplaza con el origen de tu aplicación Vue.js
+        builder.WithOrigins("http://127.0.0.1:5173") // Reemplaza con el origen de tu aplicación Vue.js
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials(); // Permitir credenciales

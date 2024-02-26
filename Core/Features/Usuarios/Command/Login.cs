@@ -9,9 +9,6 @@ namespace Core.Features.Usuarios.Command;
 
 public record Login : IRequest<LoginResponse>
 {
-    /// <example>
-    /// samuelopez
-    /// </example>
     [Required]
     public string UserName { get; set; }
     
@@ -22,10 +19,12 @@ public record Login : IRequest<LoginResponse>
 public class LoginCommandHandler : IRequestHandler<Login, LoginResponse>
 {
     private readonly IAuthService _authService;
+    private readonly ChatContext _context;
     
-    public LoginCommandHandler(IAuthService authService)
+    public LoginCommandHandler(IAuthService authService, ChatContext chat)
     {
         _authService = authService;
+        _context = chat;
     }
     
     public async Task<LoginResponse> Handle(Login request, CancellationToken cancellationToken)
@@ -39,11 +38,14 @@ public class LoginCommandHandler : IRequestHandler<Login, LoginResponse>
         
         if(token == null)
             throw new NotFoundException("Usuario no encontrado");
+
+        var name = await _context.Usuarios.FirstOrDefaultAsync(x => x.UserName == request.UserName);
         
         //Respuesta
         return new LoginResponse()
         {
             Token = token,
+            nombreUser = name.UserName
         };
     }
 }
@@ -51,4 +53,6 @@ public class LoginCommandHandler : IRequestHandler<Login, LoginResponse>
 public record LoginResponse
 {
     public string Token { get; set; }
+    
+    public string nombreUser { get; set; }
 }
