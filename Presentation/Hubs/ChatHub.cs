@@ -1,18 +1,25 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using System.Threading.Tasks;
 
-namespace Presentation.Hubs;
-
-public class ChatHub : Hub
+namespace Presentation.Hubs
 {
-    public async Task SendMessage(string room, string user, string message)
+    public class ChatHub : Hub
     {
-        await Clients.Group(room).SendAsync("ReceiveMessage", user, message);
-    }
+        public async Task SendMessage(string room, string user, string message)
+        {
+            await Clients.Group(room).SendAsync("ReceiveMessage", user, message);
+        }
 
-    public async Task AddToGroup(string room)
-    {
-        await Groups.AddToGroupAsync(Context.ConnectionId, room);
+        public async Task AddToGroup(string room)
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, room);
 
-        await Clients.Group(room).SendAsync("ShowWho", $"Alguien se conecto {Context.ConnectionId}");
+            await Clients.Group(room).SendAsync("ShowWho", $"Alguien se conectó {Context.ConnectionId}");
+        }
+
+        public async Task RemoveFromGroup(string room)
+        {
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, room);
+        }
     }
 }
