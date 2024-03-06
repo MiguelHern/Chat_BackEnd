@@ -19,7 +19,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddPresentationServices(builder.Configuration);
 builder.Services.AddSecurity(builder.Configuration);
 
-builder.Services.AddCors(options =>
+/* builder.Services.AddCors(options =>
 {
     options.AddPolicy("SignalRPolicy", builder =>
     {
@@ -28,6 +28,16 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod()
             .AllowCredentials(); // Permitir credenciales
     });
+});*/
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
 });
 
 //Database
@@ -49,9 +59,14 @@ app.UseRouting();
 app.UseAuthorization();
 app.UseCors("SignalRPolicy");
 
-app.UseEndpoints(endpoints =>
+/*app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<ChatHub>("/message").RequireCors("SignalRPolicy");
+    endpoints.MapControllers();
+});*/
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/message").RequireCors("AllowAllOrigins");
     endpoints.MapControllers();
 });
 
