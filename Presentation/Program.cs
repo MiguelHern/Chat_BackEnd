@@ -57,7 +57,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting(); 
 app.UseAuthorization();
-app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.UseCors("AllowAllOrigins");
 
 /*app.UseEndpoints(endpoints =>
 {
