@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace Presentation.Hubs
 {
+    [EnableCors("AllowOrigin")]
     public class ChatHub : Hub
     {
         public async Task SendMessage(string room, string user, string message)

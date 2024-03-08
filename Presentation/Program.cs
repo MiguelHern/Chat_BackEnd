@@ -19,25 +19,15 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddPresentationServices(builder.Configuration);
 builder.Services.AddSecurity(builder.Configuration);
 
-/* builder.Services.AddCors(options =>
+builder.Services.AddCors(options =>
 {
     options.AddPolicy("SignalRPolicy", builder =>
     {
-        builder.WithOrigins("https://nxmessage.netlify.app") // Reemplaza con el origen de tu aplicación Vue.js
+        builder.WithOrigins("http://127.0.0.1:5173","https://nxmessage.netlify.app") // Reemplaza con el origen de tu aplicación Vue.js
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials(); // Permitir credenciales
     });
-});*/
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-        });
 });
 
 //Database
@@ -57,16 +47,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting(); 
 app.UseAuthorization();
-app.UseCors("AllowAllOrigins");
+app.UseCors("SignalRPolicy");
 
-/*app.UseEndpoints(endpoints =>
-{
-    endpoints.MapHub<ChatHub>("/message").RequireCors("SignalRPolicy");
-    endpoints.MapControllers();
-});*/
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHub<ChatHub>("/message").RequireCors("AllowAllOrigins");
+    endpoints.MapHub<ChatHub>("/message").RequireCors("SignalRPolicy");
     endpoints.MapControllers();
 });
 
